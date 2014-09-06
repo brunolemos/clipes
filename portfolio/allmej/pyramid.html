@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5 Pyramid</title>
+    <style>
+        @-webkit-keyframes turnIt {
+            0% {
+                -webkit-transform: rotateX(-5deg) rotateY(0deg) rotateZ(0deg);
+            }
+            50% {
+                -webkit-transform: rotateX(5deg) rotateY(180deg) rotateZ(0deg);
+            }
+            100% {
+                -webkit-transform: rotateX(-5deg) rotateY(360deg) rotateZ(0deg);
+            }
+        }
+
+        @-moz-keyframes turnIt {
+            0% {
+                -moz-transform: rotateX(-5deg) rotateY(0deg) rotateZ(0deg);
+            }
+            50% {
+                -moz-transform: rotateX(5deg) rotateY(360deg) rotateZ(0deg);
+            }
+        }
+
+        @-ms-keyframes turnIt {
+            0% {
+                -ms-transform: rotateX(-5deg) rotateY(0deg) rotateZ(0deg);
+            }
+            50% {
+                -ms-transform: rotateX(5deg) rotateY(360deg) rotateZ(0deg);
+            }
+        }
+
+        @-o-keyframes turnIt {
+            0% {
+                -o-transform: rotateX(-5deg) rotateY(0deg) rotateZ(0deg);
+            }
+            50% {
+                -o-transform: rotateX(5deg) rotateY(360deg) rotateZ(0deg);
+            }
+        }
+
+        @keyframes turnIt {
+            0% {
+                transform: rotateX(-5deg) rotateY(0deg) rotateZ(0deg);
+            }
+            50% {
+                transform: rotateX(5deg) rotateY(180deg) rotateZ(0deg);
+            }
+            100% {
+                transform: rotateX(-5deg) rotateY(360deg) rotateZ(0deg);
+            }
+        }
+
+        html, body{
+            height: 100%;
+            overflow: hidden;
+        }
+        body{
+            margin: 0;
+            -webkit-perspective:2000px;
+            -moz-perspective:2000px;
+            -ms-perspective:2000px;
+            -o-perspective:2000px;
+            perspective:2000px;
+            /*background: -webkit-repeating-linear-gradient(-45deg, transparent, rgba(255,255,255,.05) 350px), #333;
+            background: -moz-repeating-linear-gradient(-45deg, transparent, rgba(255,255,255,.05) 350px), #333;
+            background: -ms-repeating-linear-gradient(-45deg, transparent, rgba(255,255,255,.05) 350px), #333;
+            background: -o-repeating-linear-gradient(-45deg, transparent, rgba(255,255,255,.05) 350px), #333;
+            background: repeating-linear-gradient(-45deg, transparent, rgba(255,255,255,.05) 350px), #333;*/
+        }
+        #pyramid{
+            position: absolute;
+            top:50%;
+            left:50%;
+            width: 200px;
+            height: 200px;
+            margin: -100px 0 0 -100px;
+            /*background: transparent url("http://localhost/allmej/img/logo-white.png") no-repeat 50px 50px;
+            background-size: 120px auto;*/
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-animation: turnIt 18s linear infinite;
+            -moz-animation: turnIt 18s linear infinite;
+            -ms-animation: turnIt 18s linear infinite;
+            -o-animation: turnIt 18s linear infinite;
+            animation: turnIt 18s linear infinite;
+        }
+        #pyramid div{
+            position: absolute;
+            top:-10px;
+            left:-95px;
+            width: 0;
+            height: 0;
+            border-width: 275px 195px;
+            border-style: solid;
+            border-color: transparent transparent rgba(226, 0, 122, .55) transparent;
+            -webkit-transition:opacity .75s ease-in-out;
+            -moz-transition:opacity .75s ease-in-out;
+            -ms-transition:opacity .75s ease-in-out;
+            -o-transition:opacity .75s ease-in-out;
+            transition:opacity .75s ease-in-out;
+        }
+        #pyramid div:hover{
+            opacity: .2;
+        }
+        #pyramid div:not(:last-of-type)::after{
+            /*content: url("images/lg_js-eu.svg");*/
+            position: absolute;
+            right:-200px;
+            bottom:-350px;
+        }
+        #pyramid div:nth-of-type(1){
+            border-bottom-color: rgba(226, 0, 122, .5);
+            -webkit-transform: translate3d(0,-300px,0) rotateX(45deg);
+            -moz-transform: translate3d(0,-300px,0) rotateX(45deg);
+            -ms-transform: translate3d(0,-300px,0) rotateX(45deg);
+            -o-transform: translate3d(0,-300px,0) rotateX(45deg);
+            transform: translate3d(0,-300px,0) rotateX(45deg);
+        }
+        #pyramid div:nth-of-type(2){
+            border-bottom-color: rgba(226, 0, 122, .5);
+            -webkit-transform: translate3d(0,-300px,0) rotateY(180deg) rotateX(45deg);
+            -moz-transform: translate3d(0,-300px,0) rotateY(180deg) rotateX(45deg);
+            -ms-transform: translate3d(0,-300px,0) rotateY(180deg) rotateX(45deg);
+            -o-transform: translate3d(0,-300px,0) rotateY(180deg) rotateX(45deg);
+            transform: translate3d(0,-300px,0) rotateY(180deg) rotateX(45deg);
+        }
+        #pyramid div:nth-of-type(3){
+            -webkit-transform: translate3d(0,-300px,0) rotateY(90deg) rotateX(45deg);
+            -moz-transform: translate3d(0,-300px,0) rotateY(90deg) rotateX(45deg);
+            -ms-transform: translate3d(0,-300px,0) rotateY(90deg) rotateX(45deg);
+            -o-transform: translate3d(0,-300px,0) rotateY(90deg) rotateX(45deg);
+            transform: translate3d(0,-300px,0) rotateY(90deg) rotateX(45deg);
+        }
+        #pyramid div:nth-of-type(4){
+            -webkit-transform: translate3d(0,-300px,0) rotateY(-90deg) rotateX(45deg);
+            -moz-transform: translate3d(0,-300px,0) rotateY(-90deg) rotateX(45deg);
+            -ms-transform: translate3d(0,-300px,0) rotateY(-90deg) rotateX(45deg);
+            -o-transform: translate3d(0,-300px,0) rotateY(-90deg) rotateX(45deg);
+            transform: translate3d(0,-300px,0) rotateY(-90deg) rotateX(45deg);
+        }
+        #pyramid div:nth-of-type(5){
+            top:-96px;
+            bottom:-96px;
+            left:-96px;
+            right:-96px;
+            width: auto;
+            height: auto;
+            border: none;
+            -webkit-transform: translate3d(0,59px,0) rotateX(-90deg);
+            -moz-transform: translate3d(0,59px,0) rotateX(-90deg);
+            -ms-transform: translate3d(0,59px,0) rotateX(-90deg);
+            -o-transform: translate3d(0,59px,0) rotateX(-90deg);
+            transform: translate3d(0,59px,0) rotateX(-90deg);
+            background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,.8) 0%, rgba(226, 0, 122, .55) 70%);
+            background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,.8) 0%, rgba(226, 0, 122, .55) 70%);
+            background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,.8) 0%, rgba(226, 0, 122, .55) 70%);
+            background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,.8) 0%, rgba(226, 0, 122, .55) 70%);
+            background: radial-gradient(center, ellipse cover, rgba(255,255,255,.8) 0%, rgba(226, 0, 122, .55) 70%);
+        }
+    </style>
+</head>
+<body>
+    <div id="pyramid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

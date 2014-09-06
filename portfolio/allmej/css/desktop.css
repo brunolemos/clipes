@@ -1,0 +1,42 @@
+@media (min-width: 961px) {
+	#logo {
+		transition: background 0.1s, opacity 0.1s;
+	}
+
+	#sidebar {
+		width: 330px;
+	}
+
+	#sidebar-scroll {
+		width: 350px;
+	}
+
+	#main {
+		left: 330px;
+		right: 0;
+	}
+
+	#main-scroll {
+		right: -20px;
+		padding: 3%;
+	}
+
+	#menu .item a {
+		height: 60px;
+		line-height: 60px;
+	}
+
+	#search-container.opened .search #input-search {
+		width: 350px;
+	}
+
+	/* ----------------------------------------------------------------------- */
+
+	#content .membros .item {
+		float: left;
+		margin: 0 15px 15px 0;
+		width: 200px;
+		height: 200px;
+		background-color: #eee;
+	}
+}

@@ -1,0 +1,34 @@
+<section id="artist">
+	<section class="row">
+		<section class="top_songs col-sm-6 pull-right">
+			<ul class="table_list">
+				<li class="table_row" ng-repeat="song in songs" ng-click="play_track(song.id)">
+					<ul>
+						<li class="table_col index">{{$index}}</li>
+						<li class="table_col title">{{song.title}}</li>
+						<li class="table_col duration">{{song.duration | humain_time}}</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+
+		<section class="albuns col-sm-6 pull-left" ng-if="albums.length">
+			<ul class="grid_list">
+				<li ng-repeat="album in albums | limitTo:albumLimit | orderBy:'order'" ng-class="{
+					'col-xs-6 col-sm-6 col-md-8 col-lg-8': $index == 0,
+					'col-xs-6 col-sm-6 col-md-4 col-lg-4': $index != 0,
+					'selected': albumID == album.id,
+				}">
+					<a href="javascript:void(0)" ng-click="selectAlbum(album.id)">
+						<div class="cover-wrapper" force-square>
+							<img ng-src="{{album.cover}}?size=400" class="cover smooth-load" />
+							<div class="see"></div>
+						</div>
+
+						<span class="name">{{album.title}}</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</section>
+</section>

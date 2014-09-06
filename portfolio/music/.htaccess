@@ -1,0 +1,14 @@
+RewriteEngine on
+
+#<IfModule mod_headers.c>
+#	Header set Access-Control-Allow-Origin "*"
+#	Header set Access-Control-Allow-Credentials true
+#</IfModule>
+
+# Don't rewrite files
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_URI} ^.*\.([a-z]{2,4})$
+RewriteRule ^ - [L]
+
+# Rewrite everything else to index.html to allow html5 state links
+RewriteRule ^ index.html [L]

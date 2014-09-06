@@ -1,0 +1,20 @@
+#header {
+	position: fixed;
+	top: 0; left: 0; right: 0;
+	padding: 20px 0;
+	height: 80px;
+	background-color: #fff;
+	z-index: 500;
+	/*background-image: url(http://wallpoper.com/images/00/26/06/21/gaussian-blur_00260621.jpg);
+	background-position: center top;
+	background-size: 100% auto;*/
+}
+
+#header .user_area .avatar {
+	display: inline-block;
+	width: 40px; height: 40px;
+	background-color: #eee;
+	-webkit-border-radius: 999em;
+	   -moz-border-radius: 999em;
+	        border-radius: 999em;
+}

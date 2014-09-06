@@ -1,0 +1,2 @@
+/*! Clipes 2014-01-20 */
+localStorage.genres=localStorage.genres?localStorage.genres:"{}",localStorage.artists_following=localStorage.artists_following?localStorage.artists_following:"{}",App={},App.genres=JSON.parse(localStorage.genres);

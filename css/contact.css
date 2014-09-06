@@ -1,0 +1,24 @@
+#contact {
+	background-color: #16a085;
+}
+
+#contact > section {
+	height: 100%;
+	float: left;
+}
+
+/*#contact > .facebook {
+	width: 25%;
+	background-color: #3B5998;
+	color: #fff;
+}
+
+#contact > .linkedin {
+	width: 25%;
+	background-color: #e9e9e9;
+}
+
+#contact > .form {
+	width: 50%;
+	background-color: #e9e9e9;
+}*/

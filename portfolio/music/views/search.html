@@ -1,0 +1,16 @@
+<section id="search">
+	<section class="results">
+		<ul class="grid_list">
+			<li ng-repeat="artist in search_artists | limitTo: 9" ng-class="$index == 0 ? 'col-xs-6 col-sm-8 col-md-6 col-lg-4' : 'col-xs-6 col-sm-4 col-md-3 col-lg-2'" ng-init="size = ($index == 0 ? 400 : 180)">
+				<a ui-sref="artist({id: artist.id})">
+					<div class="cover-wrapper" force-square>
+						<img ng-src="{{artist.picture}}?size={{size}}" class="cover smooth-load" />
+						<div class="see"></div>
+					</div>
+
+					<span class="name">{{artist.name}}</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+</section>

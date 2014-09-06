@@ -1,0 +1,107 @@
+#main {
+	position: fixed;
+	height: 100%;
+	text-align: center;
+	background-color: #fafafa;
+	z-index: 100;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	     -o-user-select: none;
+	        user-select: none;
+}
+
+#main .main-block {
+	position: absolute;
+	display: inline-block;
+	left: 0;
+	top: -webkit-calc(50% - 70px);
+	top:    -moz-calc(50% - 70px);
+	top:         calc(50% - 70px);
+	width: 100%;
+}
+
+#main h2 .fa {
+	font-size: 0.5em;
+	line-height: 3em;
+}
+
+#main .social-buttons {
+	position: absolute;
+	top: 2em; right: 2em;
+}
+
+#main .social-buttons .button {
+	float: left;
+	margin-left: 1em;
+}
+
+#main .social-buttons .button .text {
+	display: none;
+}
+
+#main .social-buttons .button a {
+	display: inline-block;
+	width: 1.8em; height: 1.8em; line-height: 1.8em;
+	font-size: 24px;
+	/*color: rgba(255, 255, 255, 0.6);
+	/*border: 3px solid transparent;*/
+	border-radius: 0.5em;
+	opacity: 0.6;
+}
+
+#main .social-buttons .button a:hover,
+#main .social-buttons .button a:focus {
+	/*border-color: #000;*/
+	/*background-color: #000;*/
+	/*color: #fff;*/
+	opacity: 1;
+}
+
+#main .scroll-down {
+	position: absolute;
+	bottom: 30px;
+	left:         48%;
+	left:         calc(50% - 25px);
+	left:    -moz-calc(50% - 25px);
+	left: -webkit-calc(50% - 25px);
+	width: 50px; height: 50px; line-height: 50px;
+	font-size: 2em;
+	color: rgba(0, 0, 0, 0.1);
+	-webkit-animation: teste infinite 1.2s;
+	   -moz-animation: teste infinite 1.2s;
+	        animation: teste infinite 1.2s;
+}
+
+#main .scroll-down .text {
+	display: none;
+}
+
+/*#main .social-buttons .button a.facebook:hover,
+#main .social-buttons .button a.facebook:focus {
+	border-color: #3B5998;
+	color: #3B5998;
+}*/
+
+/*#main .avatar_area {
+	position: relative;
+	width: 300px;
+	margin: 0em auto 3em;
+}
+
+#main .avatar_area .avatar {
+	margin: auto;
+	width: 180px; height: 180px;
+	background-color: #eee;
+	background-position: center top;
+	background-size: 100% auto;
+	border: 0.2em solid #fff;
+	border-radius: 99em;
+}
+
+#main .avatar_area .text {
+	position: absolute;
+	left: 0; right: 0; bottom: -1.8em;
+	font-size: 2em; font-weight: bold;
+	line-height: 1.8em;
+}*/

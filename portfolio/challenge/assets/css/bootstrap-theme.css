@@ -1,0 +1,34 @@
+.btn {
+	/*position: relative; buga icones dentro*/
+	display: inline-block;
+	padding: 0 1em;
+	border: 1px solid transparent; /*rgba(0, 0, 0, 0.2)*/
+	background-color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
+	word-wrap: break-work;
+	overflow: hidden;
+	/*text-shadow: 1px 1px rgba(0, 0, 0, 0.3);*/
+	color: #000;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.btn:hover {
+	background-color: #fff	;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-link {
+	border: 0;
+}
+
+.btn-primary {
+	background-color: rgba(0, 0, 0, 0.8);
+	border-color: transparent;
+	color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-toggle:focus, .btn-toggle:active, .btn-toggle:hover {
+	font-weight: 600;
+}

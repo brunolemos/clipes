@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="http://brunolemos.org/portfolio/clipes/"/>
+	<!-- <base href="/clipes/client/build/"/> -->
+	
+	<meta charset="utf-8"/	>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content=""/>
+	<meta name="author" content=""/>
+	<title>Clipes - Listen to your favourite songs watching their videos</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300"/>
+</head>
+
+<body ng-app="app" ng-controller="MainController">
+	<script type="text/javascript" src="assets/js/script.js"></script>
+	<script type="text/javascript" src="assets/js/ganalytics.js"></script>
+	<header id="header">
+		<div class="container">
+			<nav class="menu">
+				<ul class="list_itens">
+					<li class="item"><a href="javascript:void(0)" active-link="active">Feed</a></li>
+					<li class="item"><a href="genres/" active-link="active">Genres</a></li>
+					<li class="item"><a href="artists/" active-link="active">Artists</a></li>
+					<li class="item"><a href="javascript:void(0)" active-link="active">Playlists</a></li>
+					<li class="item"><a href="feedback/" active-link="active">Feedback</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section id="content">
+		<div class="container" ng-view></div>
+	</section>
+
+	<section ng-include="'views/player.html'"></section>
+
+	<script type="text/javascript" src="http://code.angularjs.org/1.2.8/angular.min.js"></script>
+	<script type="text/javascript" src="http://code.angularjs.org/1.2.8/angular-route.min.js"></script>
+	<script type="text/javascript" src="http://code.angularjs.org/1.2.8/angular-touch.min.js"></script>
+	<!-- <script type="text/javascript" src="http://code.angularjs.org/1.2.8/angular-animate.min.js"></script> -->
+	<script type="text/javascript" src="controllers/controllers.js"></script>
+	<script type="text/javascript" src="assets/js/sessioncam.js"></script>
+</body>
+</html>

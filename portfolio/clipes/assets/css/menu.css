@@ -1,0 +1,9 @@
+#menu .item {
+	float: left;
+	margin-right: 20px;
+	font-size: 2em;
+}
+
+#menu .item.active a {
+	color: #333;
+}

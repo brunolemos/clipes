@@ -1,0 +1,13 @@
+#genres .itens_list {
+	margin-bottom: -20px;
+	
+	-webkit-column-count: 4;
+	   -moz-column-count: 4;
+	        column-count: 4;
+	-webkit-column-gap: 40px;
+	   -moz-column-gap: 40px;
+	        column-gap: 40px;
+	-webkit-column-rule: 1px outset #f0f0f0;
+	   -moz-column-rule: 1px outset #f0f0f0;
+	        column-rule: 1px outset #f0f0f0;
+}

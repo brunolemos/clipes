@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="Clipes">
+<head>
+	<meta charset="utf-8"/	>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content=""/>
+	<meta name="author" content=""/>
+	<title>Sample App With AngularJS</title>
+
+	<!-- <base href="http://localhost/music/" /> -->
+	<base href="http://brunolemos.org/portfolio/music/" />
+
+	<script src="assets/js/lib/angular.min.js"></script>
+    <script src="assets/js/lib/angular-ui-router.min.js"></script>
+    <script src="assets/js/lib/firebase.js"></script>
+	<script src="assets/js/lib/angularfire.js"></script>
+	<!-- 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="assets/js/lib/angular-ui-router.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.js"></script>
+	-->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/project.js"></script>
+</head>
+<body smooth-load>
+	<div id="dz-root"></div>
+
+ 	<header>
+ 		<section>
+			<input type="text" id="input_search" class="page_title" ng-model="search" placeholder="SEARCH" ng-keyup="onSearchKeyUp($event)" autofocus/>
+ 		</section>
+	</header>
+
+	<section id="main" ui-view></section>
+
+	<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/> -->
+	<link rel="stylesheet" href="assets/css/lib/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300"/>
+
+	<!-- <script src="https://cdns-files.deezer.com/js/min/dz.js"></script> -->
+	<script src="assets/js/lib/dz.js"></script>
+	<script src="assets/js/analytics.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www.allmej.com.br/$ [OR]
+RewriteCond %{HTTP_HOST} ^allmej.com.br/$
+RewriteRule ^$ http://allmej.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.mauriciogiordano.com/$ [OR]
+RewriteCond %{HTTP_HOST} ^mauriciogiordano.com/$
+RewriteRule ^$ http://allmej.com/$1 [R=301,L]
+
+RewriteRule ^i/([^/\.]+)/?$ index.php?reference=$1 [L,QSA]
+#RewriteRule ^([^/\.]+)/?$ index.php?url=$1 [L,QSA]

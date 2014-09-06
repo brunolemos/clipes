@@ -1,0 +1,230 @@
+/** windows phone / ie10 responsivefix */
+@-ms-viewport{min-width: device-width;}
+@-ms-viewport{max-width: device-width;}
+@-ms-viewport{width:auto;}
+
+::-webkit-scrollbar {
+    width: 8px; height: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+	font-size: 16px; font-family: 'PT Sans', sans-serif, Helvetica, Verdana;
+	background-color: #32445a;
+	color: #fff;
+}
+
+ul, ol, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a, a:link, a:hover, a:active, a:focus {
+	text-decoration: none;
+}
+
+#main {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+
+header {
+	position: relative;
+	width: 100%; min-height: calc(100% - 80px);
+	/*background: url(../img/header-bg.png) center top repeat; background-size: cover;*/
+}
+
+header > .container {
+	height: 100%;
+}
+
+header .top {
+	height: 3em;
+	margin: 1.5em 0;
+}
+
+header .logo {
+	width: 15em; height: 3em; line-height: 3em;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+header .top .menu .item a {
+	display: inline-block;
+	font-size: 1.5em;
+	line-height: 2em;
+	color: #fff;
+}
+
+header .banner {
+	/*position: absolute;*/
+	clear: both;
+	height: 100%;
+}
+
+@media (max-width: 499px) {
+	header .banner {
+		font-size: 11px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	header .banner {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 767px) {
+	header .banner .left {
+		text-align: center;
+	}
+}
+
+header .banner .left .text {
+	padding: 4em 0 3em;
+}
+
+header .banner .left .text h1 {
+	margin: 0 0 0.5em;
+	font-size: 3em;
+	line-height: 1.2em;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+header .banner .left .text p {
+	margin: 0;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	color: #fff;
+}
+
+header .banner .left .buttons {
+	margin-bottom: 1.5em
+}
+
+header .banner .left .buttons .btn {
+	height: 3.5em; line-height: 3.5em;
+	background-color: rgba(0, 0, 0, 0.4);
+	margin-right: 1.5em;
+	color: #fff;
+	box-shadow: inset 0px -3px rgba(0, 0, 0, 0.4);
+	border: 0;
+	border-radius: 0.5em;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	header .banner .left .buttons .btn {
+		margin-right: 0.5em;
+	}
+}
+
+header .banner .left .buttons .btn:last-child {
+	margin-right: 0;
+}
+
+header .banner .left .buttons .btn:hover {
+	background-color: #16a085;
+	/*box-shadow: none;*/
+}
+
+/* temporario */
+@media (max-width: 767px) {
+	header .banner .right {
+		display: none;
+	}
+}
+
+header .banner .right {
+	position: absolute;
+	right: 0;
+	height: 100%;
+	padding: 0;
+}
+
+header .banner .right .img {
+	position: absolute;
+	bottom: 0;
+	width: 100%; height: 100%;
+	background: url(../img/phone.png) center bottom no-repeat;
+	background-size: cover;
+}
+
+
+
+#menu {
+	height: 80px;
+	background-color: rgba(0, 0, 0, 0.4);
+	white-space: nowrap;
+	overflow-x: auto; overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+#menu .item {
+	position: relative;
+	display: inline-block;
+}
+
+#menu .item a {
+	display: inline-block;
+	height: 80px; line-height: 80px;
+	padding: 0 30px;
+	color: #999;
+}
+
+/*#menu .item:first-child a {
+	padding-left: 0;
+}*/
+
+#menu .item a:hover {
+	color: #fff;
+}
+
+#menu .item.active a {
+	box-shadow: inset 0px 2px #16a085;
+	color: #fff;
+}
+
+#menu .item a:before {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 17px;
+	border-right: 1px solid rgba(255,255,255,.1);
+	right: 1px;
+	top: 50%;
+	margin-top: -8px;
+}
+
+#menu .item a:after {
+	content: '';
+	position: absolute;
+	display: block;
+	height: 17px;
+	border-right: 1px solid rgba(0,0,0,.95);
+	right: 0;
+	top: 50%;
+	margin-top: -8px;
+}
+
+#menu .item:last-child a:before,
+#menu .item:last-child a:after {
+	border: 0;
+}
+
+
+
+
+
+#content > .container {
+	padding-top: 1.5em; padding-bottom: 1.5em;
+}

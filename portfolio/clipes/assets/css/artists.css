@@ -1,0 +1,15 @@
+#artists .itens_list {
+	margin-bottom: -20px;
+}
+
+#artists .itens_list .item {
+	float: left;
+}
+
+#artists .itens_list .item:first {
+	margin-left: 0;
+}
+
+#artists .itens_list .item .btn {
+	position: relative;
+}

@@ -1,0 +1,236 @@
+#AppPlayer,
+#AppPlayer .Player {
+	position: absolute;
+	left:0; right: 0; bottom: 0;
+	min-height: 90px;
+}
+
+#AppPlayer {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+#PlayerBackgroundSize {
+	position: fixed;
+	top:0; left:0; right: 0; bottom: 0;
+	z-index: -1;
+}
+
+
+#PlayerBackground button,
+#AppPlayer button {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	text-indent: -9999px;
+}
+
+#AppPlayer .BackgroundContent {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+#AppPlayer .Player {
+	overflow: hidden;
+}
+
+#AppPlayer .Player .left_controls {
+	position: absolute;
+	left: 0; bottom: 0.5em;
+	/*width: 330px;*/
+	padding-left: 1em;
+}
+
+#AppPlayer .Player button {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#AppPlayer .Player .left_controls button {
+	float: left;
+	width: 51px; height: 50px;
+	margin: 0.5em 1em 0.5em 0;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	-webkit-border-radius: 50px;
+	   -moz-border-radius: 50px;
+	        border-radius: 50px;
+}
+
+#AppPlayer .Player .left_controls .prev {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAAABGdBTUEAALGPC/xhBQAAAHtQTFRF/f398vLy8vLyzMzM+fn5y8vL+fn58vLy/Pz80dHR/Pz8/f399PT0////1dXV/Pz8/Pz8aGho/f39AAAAAAAAs7Oz+Pj49PT01dXV/////f395+fngICA/v7+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////ehjajwAAACh0Uk5T4omHLbgst4W1J7Leh/crtLcW4AwKMriGKvbfVRL3CAcGCQQFAgEDAJxbwjUAAAC7SURBVEjH7ZTHDsMgEESd3oud4m5Mzf7/FwYwSeRDDFjJjb0MK+2T0OxA9PCvKDCBCczvGM557/DuvzOcCcY7VQcjwwwjQJgabTdbwqRkJ9kPM4ICFVzQapVDQ2mV5oCsTAuIkqbcAcDlWhZSGmFnMJ7NQdXtrgVbGQTxpNazYMSFiaBfLkwygomnvndTHiyWfh4Yr4vO68TJ69dO01rvdH+w7/STnWyts3M8W7MzJqNj3kL4QwITmP8yT8eofvMpPVYbAAAAAElFTkSuQmCC);}
+/*#AppPlayer .Player .left_controls .prev {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAAABGdBTUEAALGPC/xhBQAAAMBQTFRF6OjoZGRk6urq3Nzc7u7uX19fxsbG8fHxtra239/f3t7et7e339/foKCg1NTU2NjY3d3d39/f1NTU3t7et7e30dHR8PDw/Pz8ra2t8PDw2NjY+Pj48vLy+Pj41dXV/Pz85+fn8/Pz4uLib29vzMzMAAAAAAAAf39//f39AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////6+vr29vb/f393t7e4eHh+vr65OTk9/f36Ojo9PT07Ozs8PDwkbBtMgAAADN0Uk5TiRbgh+IWLbgst7gq3zKGtffgh/crJ7iyMoW33obfKrT391USVQoMEvYIBwYJBAUCAQMA0P+SkAAAAN9JREFUSMftlMUSwjAQhou7u7u0jSIVpLz/W5GEDkMPkNKBW/7Ll53Jd9ndRNt9H005ylHO7xxCSODwrN87BFNMHuQHH58dDPcQ86tmqwMxw3jC6s8ORRaihKJNb2vpCG2GW8uQOqZrIKjPB67rrlfzEYNOpc4ZgHTmzNNtCwCpY1xj2uwq4iOEc0veggnheHHvNQcvhHNJJaYXER9yxzwBkM2deEp5gRCOw3u9LDqOs14tawzyXiNbzHRRrtpspot6w5bOFMOjvzuFitidZl+6O1F2NMpbUH+IcpTzX+cOd6fuml9mw1gAAAAASUVORK5CYII=);}*/
+
+#AppPlayer .Player .left_controls .play_pause {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAAABGdBTUEAALGPC/xhBQAAAJ9QTFRF9fX19fX10tLS6enp+/v7sbGx9fX1qqqq+vr66Ojo1tbW+vr61dXV/Pz8/f39HBwcZmZm6urq1dXV6Ojo+vr6/f39////9PT01dXV/Pz8gICA+/v78fHx/v7+vLy8////3Nzc9/f3/v7+////7u7uMzMz/f399PT0kpKS////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////J6BIXAAAADR0Uk5TaJQzO8wXmRi7WDjFK7XdCQ9iMVm94/aIKrMSyn/0Iv5Bpuz7aQrokRX5CAUGBwQJAgMBAKhVSvQAAADFSURBVEjH7dRHEsIwDAXQ0HvvHdKAFGObf/+zQdaxxYgNLOz9G0kefXlP/vOcceaXRmvNNVoqJTXPSDHo54JWJZPjfr1lSjOMSgDEYZQSpUrmgeLtzkSDFoPT5ZjZPsNmgMN+nJrHshtg2EmMDVIGaFdNY9EGQaUhJNMAvlcq9NHUa9w6fhgJ3jxBs2XaIsr0ujnzr+PJyLJ0NkMtt8XMp5wdLbKwmCWCkYV35parbcrKnBSbdaZ42f7mhnxzq9yNd+bfzAvnQ/WiuCMqXwAAAABJRU5ErkJggg==);}
+/*#AppPlayer .Player .left_controls .play_pause {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAAABGdBTUEAALGPC/xhBQAAAOpQTFRF6OjoyMjI6enp8fHxp6en5eXl2traLy8v2NjY6Ojo7e3t3t7empqa7u7u5+fn39/fwMDA4eHh8/PzY2Nj0NDQGRkZgYGB19fX4eHh6enp4eHhurq68/Pz/v7+1dXV/Pz8kpKS+/v729vb9vb27OzsycnJbm5u0tLS19fX29vb29vbtra2uLi49/f3MzMz8fHx+fn52dnZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/v7+29vb/f393d3d+/v739/f4eHh+fn54+Pj9/f35eXl9fX15+fn8/Pz6urq8fHx7Ozs7u7uHYfJdQAAADx0Uk5TlDPs+xdoaQo7zOyZGLv7WDjF3Q9iCRWR6H/5MZH5K7UV6L30aVkSiLPj9ioiygqm/kEIBQYHBAkCAwEA1sr1oQAAAPVJREFUSMdjsCYdMIzqGdUzkHqsrKxI1WNlYWlpYUWaHgszeTlTM/y6MPSY2sjKKJhYWpGgx9LIzs5OUUXPGI9VGHrMHUBA1xCPAzH1OIOBgb6OCa7AwNTjCgXKksLG2L2FqccdDoT4jbA6EFOPJxLgZcTmLUw93siAmYHFzIKwHl9UwMWKYRGmHh9UwMlBhD1eyICJjd2MCP94IAAfNw+2VISpxw0OBAVMiQxrFyiQEBHFkegw9TiBgZS4GM7EjanHEQSUpElJo0b29vaaqkZmJOQFC1NbLXU1Y5LynIWZhraJJWl5m5wyhJyyarSMH9Uz2PQAAKmqSn76GC8bAAAAAElFTkSuQmCC);}*/
+
+#AppPlayer .Player .left_controls .play_pause.playing {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyBAMAAAAD0/68AAAABGdBTUEAALGPC/xhBQAAABhQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Vok6OAAAAAd0Uk5TAggGAQkDAD2og5UAAABhSURBVDjLY0jDBRIYRqWoJ2UQGsqclswaGmCGLpUcJOKoamaq6CIUjC6VoF5eXsTGVF5eroAulSpeXl4YFgiUEsWQci8vLwkLAUq5jkoNBSncUYknAeBJNngS22iupIkUANEv+0xL5OcBAAAAAElFTkSuQmCC);}
+/*#AppPlayer .Player .left_controls .play_pause.playing {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAAABGdBTUEAALGPC/xhBQAAAFFQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAA7u7u7Ozs6urq8fHx8/Pz5+fn9fX15eXl9/f34+Pj4eHh+fn539/f+/v73d3d/f3929vb/v7+2tra////vmPZnwAAAAd0Uk5TCAIGAQkDADhD/70AAACsSURBVEjH7dQ3DgJBEETRsXhYvLv/QUE/KA3JlkBIEExFP3lhd5i8v9BNN780OdbnYn7NUZNrCqWEVHOb4yamO0uxzXFTw5WF2qYx5cxKbdOZI8MondkzjNKZgWGUzqwZRunMkmGUziwYRunMlGGUzswYRunMnGGUzqwYRunMhmGUzmwZRunMjmGUzhwYRunMiWGU7uYujJtTutu+MW5b+f0f8smv6j++m38zD2VxQ41ehdJJAAAAAElFTkSuQmCC);}*/
+
+#AppPlayer .Player .left_controls .next {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAAABGdBTUEAALGPC/xhBQAAAIFQTFRF/f398vLyzMzM8vLy+fn5y8vL+fn5/f391dXVs7Oz/Pz80tLS9PT0sbGx/Pz8/f398vLy9PT08vLy09PT/Pz81dXV/Pz8aGhoAAAAAAAA+Pj4/f39////5+fngICA/v7+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////Ti5OuwAAACp0Uk5T4okth7gst94qMrIohjG14IaHhSm0K7cWCgy43/ZVEvcIBwYJBAUCAQMAq/IZEQAAALlJREFUSMft1McOwjAMBuCyN2WP7pHYxu//gJBAUS8opoJbfPkbqZ8U2W6D2/cVeOONN78ziNiK1sNng0AE2IQ9AzoMqMO+IgA1X1TmbVCswGVKTjaZ1gUnu0wTkmZNDkMFM8fp5fqISVooXXLlNDWbimY2hv26FhvOX9E7cyk17wo6mFhumrsN5HeLVjbGI1EPTK/DZ69jYa/NTLd2pvlSOlNQp6PdnfVUvDtddrTLt+D/Id54819zB3I9ksUX3LPEAAAAAElFTkSuQmCC);}
+/*#AppPlayer .Player .left_controls .next {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAyCAMAAADGIxO9AAAABGdBTUEAALGPC/xhBQAAAMBQTFRFxsbGZGRk6urqX19f7u7u6Ojo3Nzc8fHxtra239/f+Pj4t7e33t7enp6e39/f2NjY3d3d1NTU39/f1NTU/Pz8ra2t0tLS8PDw8PDw+Pj48PDw3t7et7e32NjY09PT/Pz85+fn8/Pz4uLizMzMb29vAAAAAAAAf39//f39AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////5+fn29vb/f393t7e4eHh+vr69/f35OTk6Ojo9PT07Ozs8PDw+lN6fwAAADN0Uk5TLRbfFuKJh7gst94quDHgtfeG34eyMiiGuN+F9iu3KbT391VVEgoMEvYIBwYJBAUCAQMAgsCs9AAAAOxJREFUSMft1NlygjAUBmBqq1atSxetrRvFFUhykmpZNOD7v1UhQ2fwonNSxt7lv/nJDN9NzgHr8++xjDHGmOsZznmpSg+/Gw5CAP8pdQaOGKCLuS8A6MvIz98GuqeAGS/YvW4Zc4Pd+5YJLljABGKEG8fxm7PeZNV2XMq82EcNOeYZD1U1LUKOGiZR+SiqfpN4uDlf5u6sYdLL1FINI+VBSmlLFbtxKzXMKc9DV1XrnpATfgduFEW95XqT1dMyv+sINeCFk+dVNtNw8LhSMw3RmQKdTdXu9DvF7nyhu1NlR6t8C+YfYowx/2u+AVY/7pwAcbOIAAAAAElFTkSuQmCC);}*/
+
+#PlayerBackground {
+	display: none;
+	position: fixed;
+	bottom: 10px; right: 10px;
+	width: 	280px; height: 156px;
+	background-color: #222;
+	/*outline: 1px solid #999;*/
+	cursor: pointer;
+	z-index: 200;
+	overflow: hidden;
+	-webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,.2)
+	   -moz-box-shadow: 0 0 15px 0 rgba(0,0,0,.2)
+	        box-shadow: 0 0 15px 0 rgba(0,0,0,.2)
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	    -ms-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+	-webkit-transform: translate3d(1, 0, 0);
+	   -moz-transform: translate3d(1, 0, 0);
+	    -ms-transform: translate3d(1, 0, 0);
+	     -o-transform: translate3d(1, 0, 0);
+	        transform: translate3d(1, 0, 0);
+}
+
+#PlayerBackground.opened {
+	right: 0; bottom: 0;
+	width: 100%; height: 100%;
+	cursor: default;
+	-webkit-transition: all 0.4s ease-out;
+	   -moz-transition: all 0.4s ease-out;
+	    -ms-transition: all 0.4s ease-out;
+	     -o-transition: all 0.4s ease-out;
+	        transition: all 0.4s ease-out;
+}
+
+#PlayerBackground .close {
+	display: none;
+	position: absolute;
+	top: 0; right: 0;
+	width: 45px; height: 45px;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAABGdBTUEAALGPC/xhBQAAAD9QTFRFxcXFy8vL/Pz8/f39/Pz80tLS////AAAA/Pz83t7exsbGzMzMvLy8AAAAAAAAAAAAAAAA/f39AAAAAAAA////0MSUhwAAABR0Uk5TIyLA3b5E/gm/JyQjJgQFAgPcAQCCSlOdAAAAlUlEQVRIx+2TOxLDIAwFSczXWBLI3P+sEXaVIROgcwEFanaemJVQ58xRi17042hm/qp/aU6QSCpJ5R7NKeiIxIQvHRq8ocGXvCOgykVDl04xl3y4Q+7YzT4JdwFNrh2o74RQcq3kt/Avg+CMLdY4GDA4lz317svJNuqk+t6qb+ngB3yH9z3L6PuznNuTyR1cv3jRj6Y/D3KS54r6F+sAAAAASUVORK5CYII=);
+	/*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAMAAAANxBKoAAAABGdBTUEAALGPC/xhBQAAAKJQTFRF8vLyy8vL6urqvb29xMTE4ODgw8PDzMzM3Nzc+vr6y8vL3Nzc+vr62NjY2NjY7u7u8PDwsrKyuLi4xMTE6Ojora2tp6env7+/+/v7rKyss7OzyMjI/Pz8tbW1r6+v3t7e29vbv7+/4ODgAAAA9PT05OTk+Pj4AAAAAAAAAAAAAAAAAAAAAAAA7u7u8vLy9vb26urq5ubm+vr64uLi/f393t7e/JAl+wAAAC10Uk5T/kT+RCTdIyPdvyLcvsC//twmJkTcJiYk3CQkI74jIye/J9wJ3NzcBAUCAwEA0v40VAAAAL9JREFUSMftk8kOgjAQhnHfZd9BlgLdEFHg/V/NxpvB2HLj0CbT//Jl0nwzVeopR5G0pGdHU0q/8i9NCSSYJWZJeTQlSbRDmGJ0jJIRPqLhoffWCKKt158hlyZh9aoMYLA75PauMXKLR7Fg5SLMd4KRrjVKo+lj+JdBCEz1rpoAChhkvW2rXbaWLdIbo6B8litWAf/dlMR5t3GAk3d5LOA7HfY+8+2fhlTAd3a5fWZ5u2Z835P2ZOIOyl8s6VnTb9Z0VdCUc3x7AAAAAElFTkSuQmCC);*/
+	background-position: center center;
+	z-index: 999;
+}
+
+#PlayerBackground.opened .close {
+	display: block;
+}
+
+#PlayerBackground .VideoLayer {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+
+
+body.fullscreen #PlayerBackground,
+body.fullscreen #ytplayer {
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100% !important; height: 100% !important;
+}
+
+#ytplayer {
+	width: 100%;
+	height: 100%;
+/*	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	    -ms-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;*/
+}
+
+/*#PlayerBackground.opened #ytplayer {
+	-webkit-transition: all 0.4s ease-out;
+	   -moz-transition: all 0.4s ease-out;
+	    -ms-transition: all 0.4s ease-out;
+	     -o-transition: all 0.4s ease-out;
+	        transition: all 0.4s ease-out;
+}*/
+
+body.fullscreen #AppPlayer {
+	display: none;
+}
+
+#PlayerBackground .controls {
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	min-height: 40px;
+	height: 20%;
+	z-index: 5;
+}
+
+#PlayerBackground .controls .progressbar {
+	position: absolute;
+	bottom: 0;
+	width: 100%; height: 5px;
+	background-color: rgba(0, 0, 0, 0.6);
+	-webkit-transition: height 0.2s linear;
+	   -moz-transition: height 0.2s linear;
+	    -ms-transition: height 0.2s linear;
+	     -o-transition: height 0.2s linear;
+	        transition: height 0.2s linear;
+}
+
+
+#PlayerBackground .controls:hover .progressbar {
+	height: 14px;
+	-webkit-transition: height 0.4s ease-out;
+	   -moz-transition: height 0.4s ease-out;
+	    -ms-transition: height 0.4s ease-out;
+	     -o-transition: height 0.4s ease-out;
+	        transition: height 0.4s ease-out;
+}
+
+#PlayerBackground .controls .progressbar .duration,
+#PlayerBackground .controls .progressbar .loaded,
+#PlayerBackground .controls .progressbar .played {
+	position: absolute;
+	height: 5px;
+}
+
+#PlayerBackground .controls .progressbar .duration {
+	width: 100%;
+	background-color: #999;
+	z-index: 1;
+}
+
+#PlayerBackground .controls .progressbar .loaded {
+	width: 0%;
+	background-color: #ccc;
+	z-index: 2;
+}
+
+#PlayerBackground .controls .progressbar .played {
+	width: 0%;
+	background-color: #1abc9c;
+	z-index: 3;
+}
+
+#PlayerBackground .controls .progressbar .dragger {
+	display: none;
+	position: absolute;
+	top: 50%; right: -8px;
+	width: 16px; height: 16px;
+	margin-top: -8px; margin-left: -8px;
+	cursor: pointer;
+	border: 0;
+	background: #eaeaea;
+	background: -webkit-linear-gradient(top, #f0f0f0, #eaeaea);
+	background:    -moz-linear-gradient(top, #f0f0f0, #eaeaea);
+	background:         linear-gradient(top, #f0f0f0, #eaeaea);
+	-webkit-box-shadow: inset 0 2px 2px rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.2);
+	   -moz-box-shadow: inset 0 2px 2px rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.2);
+	        box-shadow: inset 0 2px 2px rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.2);
+	-webkit-user-select: none;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	        border-radius: 10px;
+}
+
+#PlayerBackground .controls:hover .progressbar .dragger {
+	display: block;
+}
