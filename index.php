@@ -68,7 +68,7 @@
 
 		<div class="main-block">
 			<h1>Web&nbsp;Development&nbsp;&amp; User&nbsp;Experience</h1>
-			<h2>Front-end&nbsp;･ AngularJS&nbsp;･ Windows Phone</h2>
+			<h2>Front-end&nbsp;･ Ember&nbsp;･ Windows Phone</h2>
 		</div>
 
 		<!-- <a href="javascript:void(0)" class="scroll-down">
